@@ -151,9 +151,9 @@ public class BarcodeScannerView extends FrameLayout implements Camera.PreviewCal
         if(CURRENT_TASK == null || CURRENT_TASK.getStatus() == AsyncTask.Status.FINISHED ) {
             if(camera != null) {
                 // AsyncTask expects one parameter, so I wrap data and camera in a class
-                ProcessFrameData frameDataHeloer = new ProcessFrameData(data, camera);
+                ProcessFrameData frameDataHelper = new ProcessFrameData(data, camera);
                 CURRENT_TASK = new ProcessFrameTask();            
-                CURRENT_TASK.execute(frameDataHeloer);
+                CURRENT_TASK.execute(frameDataHelper);
             }               
 
         }
